@@ -62,3 +62,26 @@
 // argument n there would be a proportionate increase in the
 // number of for loops executed.
 
+// Tower of Hanoi
+
+function Hanoi(n, source, destination, temp) {
+  if (n === 1) {
+    return console.log(`Move disk ${n} from ${source} to ${destination}`);
+  }
+  Hanoi(n - 1, source, temp, destination);
+  console.log(`Move disk ${n} from ${source} to ${destination}`);
+  Hanoi(n - 1, temp, destination, source);
+}
+
+// Hanoi(3, "A", "C", "B");
+// Hanoi(4, "A", "C", "B");
+// Hanoi(5, "A", "C", "B");
+// Hanoi(6, "A", "C", "B");
+
+// Given 5 disks, after 7 recursive calls you will move
+// disk 1 from A to C.
+
+// You need 7 moves to do 3, 15 moves to do 4, and 31
+// moves to do 5.
+
+// Algorithm runtime is O(2^n).
