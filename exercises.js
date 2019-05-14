@@ -1,3 +1,4 @@
+'use strict';
 // What is the Big O for this
 
 // 1) O(1)
@@ -85,3 +86,109 @@ function Hanoi(n, source, destination, temp) {
 // moves to do 5.
 
 // Algorithm runtime is O(2^n).
+
+
+//Iterative version
+
+//Counting Sheep
+
+function countSheep(num){
+  for (let i=0;i<num;i++){
+    console.log(`${num -i}:Another sheep jumped over the fence`);
+  }
+  console.log('All sheep jumped over the fence');
+}
+
+// countSheep(3);
+
+//Power Calulator
+
+function powerTo(num,exponent){
+  return Math.pow(num,exponent);
+}
+
+// powerTo(5,4);
+
+// Reverse String
+
+function reverse(string){
+  let newString ='';
+  for (let i=string.length-1;i>=0;i--){
+    newString +=string[i]; 
+  }
+  return newString;
+}
+
+// reverse('hello');
+
+// nth Triangle Number
+
+function nthTriangle(num){
+  let result = 0;
+  for (let i =1; i <= num; i++){
+    result += i;
+  }
+
+  return result;
+}
+
+// console.log(nthTriangle(9));
+
+// String Splitter
+
+function splitter(input,str){
+  return input.split(str).join('');
+}
+
+// console.log(splitter('20/20/2020','/'));
+
+// Fibbonacci
+
+function fib(num){
+  let num1 = 0;
+  let num2 = 1;
+  let result = 1;
+  for (let i =1; i<num; i++){
+    result = num1 + num2;
+    num1 = num2;
+    num2 = result;
+  }
+  return result;
+}
+
+// console.log(fib(7));
+
+// Factorial
+
+function fact(num){
+  let result = 1;
+  for (let i =1; i<=num;i++){
+    result *= i;
+  }
+  return result;
+}
+
+// console.log(fact(5));
+
+// Recursive Big O
+//1. Sheep Count - linear O(n)
+//2. Power Calculator - linear O(n)
+//3. Reverse String - linear O(n)
+//4. Triangular Number - linear O(n)
+//5. String Splitter - linear O(n)
+//6. Factorial - linear O(n)
+//7. Fibonacci - O(2^n)
+//8. Maze - linear O(n)
+//9. All Maze - O(4^n) 
+//10. Anagrams - O(n^2)
+//11. Organization Chart - O(n^2)
+//12. Binary - O(log(n))
+
+// Itterative Big O
+//1. Sheep Count - linear O(n)
+//2. Power Calculator - constant O(1)
+//3. Reverse String - linear O(n)
+//4. Triangular Number - linear O(n)
+//5. String Splitter - linear O(n)
+//6. Factorial - linear O(n)
+//7. Fibonacci - linear O(n)
